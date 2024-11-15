@@ -1,0 +1,49 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+#board{
+    background-image: url("./flappybirdbg.png");
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #87CEEB, #E0FFFF);
+
+}
+canvas {
+    /* For mobile devices */
+    width: 100vw;
+    height: 100vh;
+    /* Lock the aspect ratio */
+    max-width: 360px;
+    max-height: 640px;
+    /* Center canvas on the screen */
+    margin: auto;
+    display: block;
+}
+/* adding media queries */
+/* For mobile devices */
+@media screen and (max-width: 480px) {
+    canvas {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+/* For tablets and larger devices */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    canvas {
+        width: 75vw;
+        height: 75vh;
+    }
+}
+/* For desktops */
+@media screen and (min-width: 1025px) {
+    canvas {
+        width: 360px;
+        height: 640px;
+    }
+}
